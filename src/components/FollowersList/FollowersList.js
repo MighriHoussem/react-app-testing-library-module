@@ -8,9 +8,8 @@ export default function FollowersList() {
     const [followers, setFollowers] = useState([]);
 
     useEffect(() => {
-        console.log('Fuck');
+
         const fetchFollowers = async () => {
-            console.log('Fuck');
             const { data } = await axios.get("https://randomuser.me/api/?results=5")
             setFollowers(data.results)
         }

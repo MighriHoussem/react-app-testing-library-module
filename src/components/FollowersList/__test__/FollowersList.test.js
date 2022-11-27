@@ -15,7 +15,7 @@ describe("FollowersList", () => {
     beforeEach(() => {
         // console.log("RUNS BEFORE EACH TEST")
         jest.mock("../../../__mocks__/axios")
-    })
+    });
 
     // beforeAll(() => {
     //     console.log("RUNS ONCE BEFORE ALL TESTS")
@@ -35,13 +35,14 @@ describe("FollowersList", () => {
         );
         const followerDivElement = await screen.findByTestId(`follower-item-0`)
         expect(followerDivElement).toBeInTheDocument();
+        expect(followerDivElement).toBeVisible();
     });
-    
+
     it('should fetch and render input element', async () => {
         render(
             <MockFollowersList />
         );
-    
+
         const followerDivElement = await screen.findByTestId(`follower-item-0`)
         expect(followerDivElement).toBeInTheDocument();
     });
