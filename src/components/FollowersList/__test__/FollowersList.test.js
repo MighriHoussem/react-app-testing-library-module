@@ -2,6 +2,8 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import FollowersList from "../FollowersList";
 
+import axios from "../../../__mocks__/axios";
+
 const MockFollowersList = () => {
     return (
         <BrowserRouter>

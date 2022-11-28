@@ -20,8 +20,8 @@ describe('Test Render FollowersList', () => {
         render(
             <MockedFollowersList />
         );
-        //const followerDivElement = await screen.findByTestId(`follower-item-0`)
-        //expect(followerDivElement).toBeInTheDocument();
+        const followerDivElement = await screen.findByTestId(`follower-item-0`)
+        expect(followerDivElement).toBeInTheDocument();
     });
 });
 
